@@ -1,0 +1,15 @@
+<div style="padding: 20px">
+    <app-trip-filter [limits]="filterBounds" [selectedOptions]="filterOptions" (filtersModified)="filterTrips($event)"></app-trip-filter>
+</div>
+<div class="trips-container">    
+    <app-trip-list [trips]="filtered"></app-trip-list>
+</div>
+<hr/>
+
+<!-- <app-cart></app-cart> -->
+<!-- <hr/> -->
+<!-- <app-trip-add></app-trip-add> -->
+
+<!-- <div class="cart-counter" [ngClass]="{'cart-counter--red': selectedCount < 10, 'cart-counter--green': selectedCount > 10}">
+    <h2>Zarezerwowano {{selectedCount}} miejsc!</h2>
+</div> -->

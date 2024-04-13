@@ -1,0 +1,20 @@
+<table class="history-table">
+    <thead>
+        <tr>
+            <td> Nazwa wycieczki </td>
+            <td> Ilość miejsc </td>
+            <td> Łącznie zapłacono </td>
+            <td> Data zakupu </td>
+            <td> Status </td>
+        </tr>
+    </thead>
+    <tr *ngFor="let entry of entries">
+        <td> {{entry.name}}</td>
+        <td> {{entry.reservedAmount}}</td>
+        <td> {{entry.totalPrice / 100 | currency : 'PLN'}}</td>
+        <td> {{entry.purchaseDate}}</td>
+        <td *ngIf="entry.endDate < todayDate"> Zakończona</td>
+        <td *ngIf="entry.startDate < todayDate && todayDate < entry.endDate"> W trakcie </td>
+        <td *ngIf="entry.startDate > todayDate"> Oczekiwanie na rozpoczecie</td>
+    </tr>
+</table>

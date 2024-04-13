@@ -1,0 +1,10 @@
+<div class="login">
+    <h1>Zaloguj się</h1>
+    <form class="login__form" action="" [formGroup]="form" (submit)="submitForm()">
+        <label for="login-email">Adres e-mail</label>
+        <input class="login__input" type="email" id="login-email" name="email" formControlName="email">
+        <label for="login-email">Hasło</label>
+        <input class="login__input" type="password" id="login-password" name="password" formControlName="password">
+        <input class="login__submit button--primary" type="submit" value="Zaloguj się">
+    </form>
+</div>

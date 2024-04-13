@@ -1,0 +1,111 @@
+.trip {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 300px;
+    height: 600px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 15px 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.trip--cheap {
+    outline: 5px solid rgb(0,200,0);
+}
+
+.trip--expensive {
+    outline: 5px solid red;
+}
+
+.trip-info {
+    height: 150px;
+}
+
+.trip-name {
+    margin: 10px 0 10px 0;
+}
+
+.thumbnail-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.buy-button {
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.amount-controls {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* przeniesione do styles.css */
+/* .amount-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+
+.amount-button--plus {
+    background-color: green;
+}
+
+.amount-button--minus {
+    background-color: red;
+}
+
+.amount-button--disabled {
+    background-color: grey !important;
+} */
+
+.delete-button {
+    background-color: red;
+    width: 60px;
+    height: 60px;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 50%;
+    font-weight: bold;
+}
+
+.delete-button--disabled {
+    background-color: grey !important;
+}
+
+.text-warning {
+    font-weight: bold;
+    color: #ee0000;
+    text-transform: uppercase;
+}
+
+.pricetag {
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+}
+

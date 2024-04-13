@@ -1,0 +1,11 @@
+.trip-form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px
+}
+
+.trip-form > textarea {
+    resize: vertical;
+}

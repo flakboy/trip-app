@@ -1,0 +1,20 @@
+.history-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.history-table > thead td {
+    font-weight: bold;
+} 
+
+.history-table > tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+.history-table > tr:nth-child(even) {
+    background-color: #ddd;
+}
+.history-table td {
+    padding: 10px;
+    text-align: center;
+}

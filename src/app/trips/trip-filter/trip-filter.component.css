@@ -1,0 +1,11 @@
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.filter-container {
+    max-width: 800px;
+    margin: 10px auto;
+}

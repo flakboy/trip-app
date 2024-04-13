@@ -1,0 +1,15 @@
+<h3>
+     {{username}}
+    <button (click)="toggleEdit()" class="button--primary"> {{editMode ? 'Wyłącz tryb edycji' : 'Włącz tryb edycji'}}</button>
+</h3>
+<form action="" #user{{uid}}="ngForm" (submit)="saveChanges()">
+    <fieldset class="roles-list">
+        <legend>Roles</legend>
+        <label for="role-client-{{uid}}"> Client <input type="checkbox" id="role-client-{{uid}}" name="role-client"  [(ngModel)]="roles.client" [disabled]="!editMode"></label>
+        <label for="role-manager-{{uid}}"> Manager <input type="checkbox" id="role-manager-{{uid}}" name="role-manager" [disabled]="!editMode" [(ngModel)]="roles.manager"></label>
+        <label for="role-admin-{{uid}}"> Admin <input type="checkbox" id="role-admin-{{uid}}" name="role-admin" [disabled]="!editMode" [(ngModel)]="roles.admin">  </label>  
+        <hr>
+        <label for="is-banned-{{uid}}"> Zablokowany <input type="checkbox" id="is-banned-{{uid}}" name="is-banned" [disabled]="!editMode" [(ngModel)]="isBanned">  </label>
+        <input type="submit" value="Zapisz" [attr.disabled]="!editMode ? true : null" class="button--primary">
+    </fieldset>
+</form>

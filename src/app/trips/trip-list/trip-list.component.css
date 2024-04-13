@@ -1,0 +1,10 @@
+.trip-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: #dddddd;
+    grid-column-start: 2;
+    height: 100%;
+    justify-content: center;
+}

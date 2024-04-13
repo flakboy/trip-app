@@ -1,0 +1,64 @@
+<ng-template #reviewForm [ngIf]="isUserPermitted && !auth.isBanned">
+
+    <form action=""  class="review-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <ul *ngIf="inputErrors.length > 0" class="error-list">
+            <li *ngFor="let error of inputErrors"> {{error}}</li>
+        </ul>
+    
+        <h3> Dodaj recenzję </h3>
+        <h4 class="input-title">
+            <label for="review-username">
+                Nazwa użytkownika
+            </label>
+        </h4>
+        <input type="text" name="review-username" id="review-username" 
+        formControlName="username" readonly>
+        <!-- <div *ngIf="">
+            Please enter username
+        </div> -->
+        <h4 class="input-title"> 
+            <label for="review-title">
+            Tytuł recenzji
+            </label>
+        </h4>
+        <input type="text" name="review-title" id="review-title" 
+        formControlName="title">
+    
+        <h4 class="input-title"> Ocena </h4>
+        <!-- <label class="rating-label"> -->
+        <input
+            class="rating"
+            max="5"
+            min="1"
+            oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+            step="1"
+            style="--value:5"
+            type="range"
+            value="5"
+            name="review-rating"
+            id="review-rating"
+            formControlName="rating"
+        />
+        <!-- </label> -->
+        <h4 class="input-title">
+            <label for="review-comment">
+            Komentarz 
+            </label>
+        </h4>
+        <textarea name="review-comment" id="review-comment" cols="30" rows="10" minlength="20" maxlength="500" 
+        formControlName="comment"></textarea>
+        <h4 class="input-title">
+            <label for="review-date">
+            Data zakupu
+            </label>
+        </h4>
+        
+        <input type="date" name="review-purchase-date" id="review-purchase-date">
+        <input type="submit" value="Wyślij opinię">
+    
+    </form>
+</ng-template>
+
+<ng-template #reviewBanned [ngIf]="auth.isBanned">
+   <h2 style="text-align: center;"> Nie masz uprawnień do recenzowania tej wycieczki! </h2>
+</ng-template>

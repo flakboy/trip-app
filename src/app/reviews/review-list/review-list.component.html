@@ -1,0 +1,7 @@
+<ng-template [ngIf]="reviews.length > 0">
+    <app-review-item *ngFor="let review of reviews" [data]="review"></app-review-item>
+</ng-template>
+
+<ng-template [ngIf]="reviews.length === 0">
+    <h3 style="text-align: center">Brak komentarzy do wyświetlenia.</h3>
+</ng-template>

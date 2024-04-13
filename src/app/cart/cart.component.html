@@ -1,0 +1,26 @@
+
+<div class="summary-container">
+    <h2> Koszyk </h2>
+
+    <table class="summary" *ngIf="selectedTrips.length > 0; else emptyCart">
+        <thead>
+            <th class="summary__cell">Nazwa</th>
+            <th class="summary__cell">Zarezerwowano miejsc</th>
+            <th class="summary__cell">Cena za jedno miejsce</th>
+        </thead>
+        <tr *ngFor="let item of selectedTrips" class="summary__row">
+            <td class="summary__cell">{{item.name}}</td>
+            <td class="summary__cell">{{item.amount}}</td>
+            <td class="summary__cell">{{item.price * item.amount / 100 | currency:"PLN"}}</td>
+            <td class="summary__cell"><button (click)="buyTrip(item.id)">Kup teraz</button></td>
+        </tr>
+        <tr>
+            <td class="summary__cell" colspan="2"> Łącznie:</td>
+            <td class="summary__cell" colspan="1"> {{total / 100 | currency:"PLN"}} </td>
+        </tr>
+    </table>
+    
+    <ng-template #emptyCart>
+        <h3> Nie zarezerwowano żadnych wycieczek!</h3>
+    </ng-template>
+</div>

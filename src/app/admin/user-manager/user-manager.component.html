@@ -1,0 +1,9 @@
+<div class="user-list">
+    <app-user-manager-item
+    *ngFor="let user of users"
+    [username]="user.username"
+    [uid]="user.uid"
+    [isBanned]="user.isBanned"
+    [roles]="user.roles"
+></app-user-manager-item>
+</div>

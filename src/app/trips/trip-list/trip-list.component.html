@@ -1,0 +1,8 @@
+<div class="trip-list">
+    <ng-template [ngIf]="trips.length > 0">
+        <app-trip-item *ngFor="let trip of trips" [entry]="trip" [styleModifier]="trip === mostExpensiveTrip ? modifiers.MAX_PRICE : trip === cheapestTrip ? modifiers.MIN_PRICE : modifiers.DEFAULT"></app-trip-item>
+    </ng-template>
+    <ng-template [ngIf]="trips.length === 0" style="display: flex; justify-content: center; align-items: center">
+       <h2>Brak wycieczek do wyświetlenia.</h2> 
+    </ng-template>
+</div>

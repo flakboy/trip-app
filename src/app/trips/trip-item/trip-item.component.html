@@ -1,0 +1,34 @@
+<div class="trip" [ngClass]="{'trip--cheap': styleModifier === modifiers.MIN_PRICE, 'trip--expensive': styleModifier === modifiers.MAX_PRICE}">
+    <div class="thumbnail-wrapper">
+        <a routerLink="/details/{{entry.id}}">
+            <img src="{{entry.thumbnail}}" alt="{{entry.name}}" class="thumbnail">
+        </a>
+    </div>
+    <div class="trip-info">
+        <h2 class="trip-name">{{entry.name | uppercase}}</h2>
+        <span> Kraj: {{entry.country | uppercase}}</span>
+        <p>
+            {{entry.desc}}
+        </p>
+    </div>
+    <div>
+        <div class="amount-controls">
+            <ng-template [ngIf]="entry.available > 0">
+                <span [ngClass]="{'text-warning': entry.available <= 3}">Ilość dostępnych miejsc: {{entry.available}}</span>
+            </ng-template>
+            
+            <ng-template [ngIf]="entry.available == 0">
+                Brak dostępnych miejsc!
+            </ng-template>              
+            <div [style.display]="entry.available === 0 ? 'none': 'initial'">
+                <button class="amount-button amount-button--minus" [ngClass]="{'amount-button--disabled': selectedAmount === 0}" (click)="decreaseSelectedAmount()"> - </button>
+                <span>{{selectedAmount}}</span>
+                <button class="amount-button amount-button--plus" [ngClass]="{'amount-button--disabled': selectedAmount === entry.available}" (click)="increaseSelectedAmount()"> + </button>
+            </div>
+        </div>
+        <div class="pricetag">
+            {{entry.price / 100 | currency:"PLN"}}
+            <button class="buy-button"> Buy now </button>
+        </div>
+    </div>
+</div>

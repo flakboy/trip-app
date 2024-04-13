@@ -1,0 +1,21 @@
+<!-- <app-trip-panel></app-trip-panel> -->
+
+<form action="" #addTripForm="ngForm" class="trip-form">
+    <label for="add-trip-name">Nazwa</label>
+    <input type="text" name="add-trip-name" id="add-trip-name" [(ngModel)]="inputValues.name"/>
+    <label for="add-trip-name">Kraj</label>
+    <input type="text" name="add-trip-country" id="add-trip-country" [(ngModel)]="inputValues.country"/>
+    <label for="add-trip-name">Link do miniatury</label>
+    <input type="text" name="add-trip-thumbnail" id="add-trip-thumbnail" [(ngModel)]="inputValues.thumbnail"/>
+    <label for="add-trip-name">Opis</label>
+    <textarea name="add-trip-desc" id="add-trip-desc" cols="30" rows="10" [(ngModel)]="inputValues.desc"></textarea>
+    <label for="add-trip-name">Cena</label>
+    <input type="number" name="add-trip-price" id="add-trip-price" min="0" [(ngModel)]="inputValues.price"/>
+    <label for="add-trip-name">Ilość miejsc</label>
+    <input type="number" name="add-trip-available" id="add-trip-available" min="1" [(ngModel)]="inputValues.available">
+    <label for="add-trip-name">Data wyjazdu</label>
+    <input type="date" name="add-trip-startDate" id="add-trip-startDate" [(ngModel)]="inputValues.startDate">
+    <label for="add-trip-name">Data powrotu</label>
+    <input type="date" name="add-trip-endDate" id="add-trip-endDate" [(ngModel)]="inputValues.endDate">
+    <input type="button" value="Dodaj" (click)="addTrip()">
+</form>

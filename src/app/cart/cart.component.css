@@ -1,0 +1,22 @@
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary {
+    border-collapse: collapse;
+    /* border: 1px solid black; */
+}
+
+.summary__row:nth-of-type(even){
+    background-color: #eeeeee;
+}
+
+.summary__row:nth-of-type(odd){
+    background-color: #dddddd;
+}
+
+.summary__cell {
+    padding: 10px;
+}

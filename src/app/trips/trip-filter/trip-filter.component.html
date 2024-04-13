@@ -1,0 +1,19 @@
+<div class="filter-container">
+    <h2>Filtruj wycieczki</h2>
+
+    <form action="" class="filter-form" #filterForm="ngForm">
+        <!-- lista wielokrotnego wyboru dla krajów!!!!  -->
+        <label for="price-min">Minimalna cena: {{selectedOptions.minPrice}}</label>
+        <input type="range" name="price-min" id="price-min" min="{{limits.minPrice}}" max="{{limits.maxPrice}}" [(ngModel)]="selectedOptions.minPrice" (ngModelChange)="updateFilters()">
+        <label for="price-max">Maksymalna cena: {{selectedOptions.maxPrice}}</label>
+        <input type="range" name="price-max" id="price-max" min="1" max="{{limits.maxPrice}}" [(ngModel)]="selectedOptions.maxPrice" (ngModelChange)="updateFilters()">
+        <label for="date-min">Najwcześniejszy dzień rozpoczecia:</label>
+        <input type="date" name="date-min" id="date-min" min="{{limits.minDate}}" max="{{limits.maxDate}}" [(ngModel)]="selectedOptions.minDate" (ngModelChange)="updateFilters()">
+        <label for="date-max">Najpóźniejszy dzień zakończenia:</label>
+        <input type="date" name="date-max" id="date-max" min="{{limits.minDate}}" max="{{limits.maxDate}}" [(ngModel)]="selectedOptions.maxDate" (ngModelChange)="updateFilters()">
+        <!-- <label for="min-rating">Minimalna ocena</label> -->
+        <!-- <input type="range" name="min-rating" id="min-rating" step="1" min="0" max="5" [ngModel]="selectedOptions.rating"> -->
+        <!-- ocena??? -->
+    </form>
+</div>
+

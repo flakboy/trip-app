@@ -1,0 +1,46 @@
+<nav class="navigation">
+    <ul class="menu">
+        <li class="menu__item"><a routerLink="/">Strona główna</a></li>
+        <li class="menu__item"><a routerLink="/offers">Oferty</a></li>
+        <li class="menu__item" *ngIf="auth.isLoggedIn() && auth.isClient()"><a routerLink="/cart" >Koszyk</a></li>
+        <li class="menu__item" *ngIf="auth.isLoggedIn() && auth.isClient()"><a routerLink="/history" >Historia wycieczek</a></li>
+        <li class="menu__item" *ngIf="auth.isManager()"><a routerLink="/add-trip" >Zarządzaj wycieczkami</a></li>
+        <li class="menu__item" *ngIf="auth.isAdmin()"><a routerLink="/manage-users" >Zarządzaj użytkownikami</a></li>
+    </ul>
+</nav>
+<header class="header">
+    <div class="cart-display" [ngClass]="{'cart-counter--red': selectedCount < 10, 'cart-counter--green': selectedCount > 10}">
+        <table *ngIf="auth.isLoggedIn() === true">
+            <tr>
+                <td>Ilość wycieczek</td>
+                <td>{{selectedCount}}</td>
+            </tr>
+            <tr>
+                <td>Łączna cena</td>
+                <td>{{totalValue / 100 | currency : 'PLN'}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!-- nie usuwać! -->
+    </div>
+    <div class="user-panel">
+        <div *ngIf="user !== null; then user_display else login_display"></div>
+        <ng-template #user_display>
+                <span>{{auth.getUserName()}}</span>
+                <button class="header__button" (click)="auth.signOut()">Wyloguj się</button>
+            <!-- <div>
+                Powiadomienia
+            </div> -->
+        </ng-template>
+        <ng-template #login_display>
+            <!-- <div> -->
+                <a [routerLink]="['register']"><button class="header__button">Zarejestruj się</button></a>
+                <a [routerLink]="['login']"><button class="header__button">Zaloguj się</button></a>
+            <!-- </div> -->
+        </ng-template>
+
+    </div>
+</header>
+
+<router-outlet></router-outlet>

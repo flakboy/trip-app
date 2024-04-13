@@ -1,0 +1,26 @@
+<ng-template [ngIf]="info !== undefined">
+    <div class="trip-details">
+        <h1>{{info.name}}</h1>
+        <img src="{{info.thumbnail}}"/>
+        <div>
+            <h2> Cena </h2>
+            <div>
+                {{info.price / 100 | currency : 'PLN'}}
+            </div>
+            <h2> Kup teraz! </h2>
+                <div>
+                <button class="amount-button amount-button--minus" [ngClass]="{'amount-button--disabled': selectedAmount === 0}" (click)="decreaseSelectedAmount()"> - </button>
+                <span>{{selectedAmount}}</span>
+                <button class="amount-button amount-button--plus" [ngClass]="{'amount-button--disabled': selectedAmount === info.available}" (click)="increaseSelectedAmount()"> + </button>
+            </div>
+        </div>
+        <h2>Informacje o wycieczce</h2>
+        <h3>Kraj</h3>
+        <p>{{info.country}}</p>
+        <h3>Opis wycieczki</h3>
+        <p>{{info.desc}}</p>
+    </div>
+
+    <app-review-form [tripId]="id"></app-review-form>
+    <app-review-list [tripId]="id"></app-review-list>
+</ng-template>

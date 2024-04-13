@@ -1,0 +1,24 @@
+.trip-panel__item {
+    border: 1px solid black;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+.trip-panel__item > h3 {
+    margin: 5px 0;
+}
+
+.trip-panel__item > h3 {
+    margin: 5px 0;
+}
+
+
+
+.trip-panel__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-panel__form textarea {
+    resize: vertical;
+}

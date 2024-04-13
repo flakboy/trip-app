@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Wycieczka 1",
+        "country": "Egypt",
+        "startDate": "2023-06-13",
+        "endDate": "2023-06-20",
+        "desc": "Wycieczka do egiptu",
+        "price": 90000,
+        "thumbnail": "https://www.planetware.com/photos-large/EGY/egypt-cairo-pyramids-of-giza.jpg",
+        "available": 0,
+        "images": []
+    }, 
+    {
+        "id": 2,
+        "name": "Wycieczka 2",
+        "country": "Greece",
+        "startDate": "2023-07-13",
+        "endDate": "2023-07-18",
+        "desc": "Wycieczka do Grecji",
+        "price": 120000,
+        "thumbnail": "https://handluggageonly.co.uk/wp-content/uploads/2015/05/Hand-Luggage-Only-7.jpg",
+        "available": 3,
+        "images": []
+    }, 
+    {
+        "id": 3,
+        "name": "Wycieczka 3",
+        "country": "Egypt",
+        "startDate": "2023-06-18",
+        "endDate": "2023-06-25",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 95000,
+        "thumbnail": "https://www.planetware.com/photos-large/EGY/egypt-cairo-pyramids-of-giza.jpg",
+        "available": 15,
+        "images": []
+    }, 
+    {
+        "id": 4,
+        "name": "Wycieczka 4",
+        "country": "Italy",
+        "startDate": "2023-06-14",
+        "endDate": "2023-06-24",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 150000,
+        "thumbnail": "https://www.state.gov/wp-content/uploads/2018/11/Spain-2109x1406.jpg",
+        "available": 10,
+        "images": []
+    }, 
+    {
+        "id": 5,
+        "name": "Wycieczka 5",
+        "country": "France",
+        "startDate": "2023-06-13",
+        "endDate": "2023-06-20",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 100000,
+        "thumbnail": "https://ocdn.eu/pulscms-transforms/1/RASk9kpTURBXy8xOWZmM2EwNTFkZDBhMmFiNTBjZmI2ODEwM2JmNWNiZC5qcGeTlQMAzK7NFdLNDEaTBc0EsM0CpJMJpmIyYmZlOQbeAAGhMAE/lazurowe-wybrzeze-atrakcje-turystyczne-francuskiej-riwiery.jpg",
+        "available": 10,
+        "images": []
+    }, 
+    {
+        "id": 6,
+        "name": "Wycieczka 6",
+        "country": "Germany",
+        "startDate": "2023-04-13",
+        "endDate": "2023-04-20",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 75000,
+        "thumbnail": "https://bi.im-g.pl/im/c2/99/19/z26843074Q,Niemcy-przedluzaja-lockdown-do-28-marca.jpg",
+        "available": 10,
+        "images": []
+    }, 
+    {
+        "id": 7,
+        "name": "Wycieczka 7",
+        "country": "Croatia",
+        "startDate": "2023-06-13",
+        "endDate": "2023-06-20",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 95000,
+        "thumbnail": "https://i.wpimg.pl/O/644x430/d.wpimg.pl/1244592740-2020476547/dubrownik_chorwacja_WitR_shutterstock_383220901.jpeg",
+        "available": 25,
+        "images": []
+    }, 
+    {
+        "id": 8,
+        "name": "Wycieczka 8",
+        "country": "Egypt",
+        "startDate": "2023-06-13",
+        "endDate": "2023-06-20",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 180000,
+        "thumbnail": "https://www.thetrainline.com/cmsmedia/cms/7709/japan_2x.jpg",
+        "available": 10,
+        "images": []
+    }, 
+    {
+        "id": 9,
+        "name": "Wycieczka 9",
+        "country": "Peru",
+        "startDate": "2023-06-13",
+        "endDate": "2023-06-20",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 90000,
+        "thumbnail": "https://www.peru.travel/Contenido/AcercaDePeru/Imagen/en/6/0.0/Principal/Machu%20Picchu.jpg",
+        "available": 10,
+        "images": []
+    }, 
+    {
+        "id": 10,
+        "name": "Wycieczka 10",
+        "country": "Italy",
+        "startDate": "2023-05-13",
+        "endDate": "2023-05-21",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis mauris ante. Proin vitae ligula volutpat, viverra nulla in, pretium. ",
+        "price": 120000,
+        "thumbnail": "https://images.pb.pl/filtered/6feff4b9-12f7-4aee-a300-361257b15b17/9294d2c9-e601-5e95-b279-ef7f6127e0bd_w_830.jpg",
+        "available": 10,
+        "images": []
+    }
+]

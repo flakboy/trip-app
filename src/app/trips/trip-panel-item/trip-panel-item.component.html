@@ -1,0 +1,36 @@
+<div class="trip-panel__item">
+    <h3>{{trip.name}}</h3>
+    <p>{{trip.desc}}</p>
+    <ul>
+        <li>Kraj: {{trip.country}}</li>
+        <li> Czas trwania: {{trip.startDate}} - {{trip.endDate}}</li>
+        <li> Cena {{trip.price / 100 | currency : 'PLN '}}</li>
+        <li> Dostępne miejsca: {{trip.available}}</li>
+    </ul>
+    <button class="button--primary" (click)="toggleEdit()">Edytuj</button>
+    <button class="button--primary" (click)="removeTrip()">Usuń wycieczkę</button>
+</div>
+<form *ngIf="editMode" #tripForm{{uid}}="ngForm" class="trip-panel__form" (submit)="saveChanges()">
+    <label for="{{trip.id}}-name">Nazwa</label>
+    <input type="text" id="{{trip.id}}-name" name="{{trip.id}}-name" [(ngModel)]="editedTrip.name"/>
+    
+    <label for="{{trip.id}}-desc">Opis</label>
+    <textarea id="{{trip.id}}-desc" name="{{trip.id}}-desc" [(ngModel)]="editedTrip.desc"></textarea>
+    
+    <label for="{{trip.id}}-counter">Kraj</label>
+    <input type="text" id="{{trip.id}}-country" name="{{trip.id}}-country" [(ngModel)]="editedTrip.country"/>
+    
+    <label for="{{trip.id}}-startDate">Data rozpoczęcia</label>
+    <input type="date" id="{{trip.id}}-startDate" name="{{trip.id}}-startDate" [(ngModel)]="editedTrip.startDate"/>
+
+    <label for="{{trip.id}}-endDate">Data zakończenia</label>
+    <input type="date" id="{{trip.id}}-endDate" name="{{trip.id}}-endDate" [(ngModel)]="editedTrip.endDate"/>
+
+    <label for="{{trip.id}}-price">Cena (w groszach!)</label>
+    <input type="number" id="{{trip.id}}-price" name="{{trip.id}}-price" [(ngModel)]="editedTrip.price"/>
+    
+    <label for="{{trip.id}}-available">Ilość wolnych miejsc</label>
+    <input type="number" id="{{trip.id}}-available" name="{{trip.id}}-available" [(ngModel)]="editedTrip.available" min="0"/>
+
+    <input type="submit" value="Zapisz zmiany" class="button--primary">
+</form>

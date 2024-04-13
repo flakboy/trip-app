@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Lato;
+    src: url("assets/Lato-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Lato, Calibri, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #eee;
+}
+
+:root {
+    --color-primary: #005c8f;
+    --color-primary-active: #0079bb;
+    --color-secondary: #5199c1;
+}
+
+
+.amount-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    color: white;
+    margin: 10px;
+}
+
+.amount-button--plus {
+    background-color: green;
+}
+
+.amount-button--minus {
+    background-color: red;
+}
+
+.amount-button--disabled {
+    background-color: grey !important;
+}
+
+.button--primary {
+    background: #005c8f;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+}
